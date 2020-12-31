@@ -1,0 +1,8 @@
+---
+- name: IOS conf
+  ios_config:
+    lines:
+    - ip name-server 1.1.1.1
+    - ip domain name mordor.com
+    - ntp server 2.2.2.2
+

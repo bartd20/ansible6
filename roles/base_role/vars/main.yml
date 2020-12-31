@@ -1,0 +1,7 @@
+---
+domain_name: isengard.com
+dns_server1: 1.1.1.1
+dns_server2: 2.2.2.2
+ntp_server1: 3.3.3.3
+ntp_server2: 4.4.4.4
+

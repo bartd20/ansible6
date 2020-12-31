@@ -1,0 +1,9 @@
+---
+- gather_facts: off
+  hosts: cisco5:cisco6
+  tasks:
+    - template:
+        src: template.j2
+        dest: output.txt
+
+

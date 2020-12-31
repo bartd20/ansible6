@@ -1,0 +1,5 @@
+---
+- name: VRF IOSXE subtask
+  ios_config:
+    src: main.yml
+

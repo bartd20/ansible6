@@ -1,0 +1,14 @@
+---
+- name: main Cisco conf
+  gather_facts: on
+  hosts: cisco
+  tasks:
+    
+    - name: main IOS
+      import_tasks: ios_conf.yml
+      when: ansible_facts.net_iostype == "IOS"
+
+    - name: main IOS-XE
+      import_tasks: iosxe_conf.yml
+      when: ansible_facts.net_iostype == "IOS-XE"
+

@@ -1,0 +1,15 @@
+---
+- name: ex6 show
+  gather_facts: on
+  hosts: cisco5:cisco6
+  tasks:
+    - ios_command:
+        commands:
+          - show ip vrf
+          - show run int Loopback98
+          - show run int Loopback99
+      register: out
+
+    - debug:
+        var: out
+

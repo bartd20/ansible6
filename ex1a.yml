@@ -1,0 +1,14 @@
+---
+- name: ex1a
+  gather_facts: off
+  hosts: local
+  tasks:
+    - name: main task
+      include_tasks: subtask1.yml
+      loop:
+        - 1.1.1.1
+        - 2.2.2.2
+        - 3.3.3.3
+        - 4.4.4.4
+
+

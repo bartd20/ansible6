@@ -1,0 +1,14 @@
+---
+- debug:
+    msg: debug1
+  tags: debug1
+
+- debug:
+    msg: debug2
+  tags: debug2
+
+- debug:
+    msg: debug3
+  tags: debug3
+
+

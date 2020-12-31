@@ -1,0 +1,6 @@
+---
+- name: ex5 main
+  gather_facts: on
+  hosts: cisco:arista:nxos
+  roles: 
+    - base_role

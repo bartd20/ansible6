@@ -1,0 +1,12 @@
+{% for vrf, rd in vrfs.items() %}
+ip vrf {{ vrf }}
+  rd {{ rd }}
+!
+{% endfor %}
+
+{% for intf, rd in ports.items() %}
+interface {{ intf }}
+  ip vrf forwarding {{ rd }} 
+!
+{% endfor %}
+

@@ -1,0 +1,30 @@
+---
+- name: ex4 main
+  gather_facts: on
+  hosts: cisco:arista:nxos
+  tasks:
+   
+    - name: main IOS
+      import_tasks: ios_conf.yml
+      when: 
+        - ansible_facts.net_system == "ios"
+        - ansible_facts.net_iostype == "IOS"
+      tags: ios
+ 
+    - name: main IOS-XE
+      import_tasks: iosxe_conf.yml
+      when:
+        - ansible_facts.net_system == "ios" 
+        - ansible_facts.net_iostype == "IOS-XE"
+      tags: iosxe
+
+    - name: main EOS
+      import_tasks: eos_conf.yml
+      when: ansible_facts.net_system == "eos"
+      tags: eos
+
+    - name: main NXOS
+      import_tasks: nxos_conf.yml
+      when: ansible_facts.net_system == "nxos"
+      tags: nxos
+

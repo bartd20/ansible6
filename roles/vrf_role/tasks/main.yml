@@ -1,0 +1,8 @@
+---
+- name: VRF main task
+  import_tasks: iosxe_vrf_conf.yml
+  when:
+    - ansible_facts.net_system == "ios"
+    - ansible_facts.net_iostype == "IOS-XE"
+  tags: iosxe
+

@@ -1,0 +1,9 @@
+---
+- name: ex1c
+  gather_facts: off
+  hosts: local
+  tasks:
+    - name: main task
+      include_tasks: subtask2.yml
+# enables processing/passing tags to subtasks
+#      tags: always

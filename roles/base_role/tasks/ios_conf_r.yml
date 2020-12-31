@@ -1,0 +1,5 @@
+---
+- name: IOS conf
+  ios_config:
+    src: ios.j2
+

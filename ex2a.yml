@@ -1,0 +1,9 @@
+---
+- name: ex1a
+  gather_facts: off
+  hosts: local
+  tasks:
+    - name: main task
+      import_tasks: subtask11.yml
+
+

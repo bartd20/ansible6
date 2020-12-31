@@ -1,0 +1,8 @@
+---
+- name: NXOS conf
+  nxos_config:
+    commands:
+    - ip domain-name mordor.com
+    - ip name-server 1.1.1.1
+    - ntp server 2.2.2.2 use-vrf default
+

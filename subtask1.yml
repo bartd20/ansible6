@@ -1,0 +1,5 @@
+---
+- name: subtask1
+  debug:
+    msg: "{{ item }}"
+

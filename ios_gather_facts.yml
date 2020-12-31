@@ -1,0 +1,8 @@
+---
+- name: gather facts
+  gather_facts: on
+  hosts: cisco
+  tasks:
+    - debug:
+        var: ansible_facts
+ 

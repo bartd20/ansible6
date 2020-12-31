@@ -1,0 +1,25 @@
+---
+- name: main IOS
+  import_tasks: ios_conf_r.yml
+  when:
+    - ansible_facts.net_system == "ios"
+    - ansible_facts.net_iostype == "IOS"
+  tags: ios
+
+- name: main IOS-XE
+  import_tasks: ios_conf_r.yml
+  when:
+    - ansible_facts.net_system == "ios"
+    - ansible_facts.net_iostype == "IOS-XE"
+  tags: iosxe
+  
+- name: main EOS
+  import_tasks: eos_conf_r.yml
+  when: ansible_facts.net_system == "eos"
+  tags: eos
+  
+- name: main NXOS
+  import_tasks: nxos_conf_r.yml
+  when: ansible_facts.net_system == "nxos"
+  tags: nxos
+

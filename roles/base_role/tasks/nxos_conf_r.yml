@@ -1,0 +1,5 @@
+---
+- name: NXOS conf
+  nxos_config:
+    src: nxos.j2
+

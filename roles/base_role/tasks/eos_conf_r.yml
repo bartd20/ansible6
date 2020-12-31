@@ -1,0 +1,5 @@
+---
+- name: EOS conf
+  eos_config:
+    src: eos.j2
+

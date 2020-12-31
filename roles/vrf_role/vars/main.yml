@@ -1,0 +1,9 @@
+---
+vrfs:
+  blue: "65000:1"
+  red: "65000:2"
+
+ports:
+  Loopback98: blue
+  Loopback99: red
+

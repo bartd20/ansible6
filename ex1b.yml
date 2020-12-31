@@ -1,0 +1,15 @@
+---
+- name: ex1b
+  gather_facts: off
+  hosts: local
+  tasks:
+  
+  - name: main task
+    include_tasks: "{{ file1 }}"
+    loop:
+      - 1.1.1.1
+      - 2.2.2.2
+      - 3.3.3.3
+      - 4.4.4.4
+
+
